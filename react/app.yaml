@@ -1,0 +1,13 @@
+runtime: python27
+api_version: 1
+threadsafe: true
+#service: pizza-react
+service: default
+
+handlers:
+- url: /
+  static_files: website/index.html
+  upload: website/index.html
+
+- url: /
+  static_dir: website
