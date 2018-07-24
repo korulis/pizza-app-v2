@@ -1,8 +1,12 @@
 runtime: python27
+env: flex
 api_version: 1
 threadsafe: true
 #service: pizza-react
 service: default
+
+#gcloud app deploy -v [YOUR_VERSION_ID] is the prefered way to set version, but can also use this tag
+version: v1
 
 handlers:
 - url: /

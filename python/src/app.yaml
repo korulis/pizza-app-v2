@@ -1,6 +1,10 @@
 service: pizza-python
 runtime: python
 env: flex
+
+#gcloud app deploy -v [YOUR_VERSION_ID] is the prefered way to set version, but can also use this tag
+version: v1
+
 #entrypoint: gunicorn -b :$PORT main:app
 entrypoint: gunicorn main:app -b localhost:8000
 
