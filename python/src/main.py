@@ -1,6 +1,3 @@
-
-
-# [START app]
 from bson.json_util import dumps,loads
 from flask import Flask, jsonify, request
 from pymongo import MongoClient
@@ -82,8 +79,6 @@ def RemoveOne(orderRef):
     return jsonify({"orderRef": orderRef}), 202
 
 if __name__ == '__main__':
-    # This is used when running locally. Gunicorn is used to run the
-    # application on Google App Engine. See entrypoint in app.yaml.
-    app.run(host='127.0.0.1', port=5000, debug=True)
-# [END app]
+    print("starting app")
+    app.run(threaded = True)
 
