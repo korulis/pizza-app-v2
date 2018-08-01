@@ -80,5 +80,5 @@ def RemoveOne(orderRef):
 
 if __name__ == '__main__':
     print("starting app")
-    app.run(threaded = True)
+    app.run(threaded = True, host="0.0.0.0")
 
